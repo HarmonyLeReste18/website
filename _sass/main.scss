@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+
+  &-logo {
+    height: 5rem;
+  }
+}
+
+.wrapper {
+  flex-grow: 1;
+  margin: 1rem;
+}
+
+@media (min-width: $layoutWidthXS) {
+  .wrapper {
+    margin: 1rem;
+  }
+}
+@media (min-width: $layoutWidthS) {
+  .wrapper {
+    margin: 2rem;
+  }
+}
+@media (min-width: $layoutWidthM) {
+  .wrapper {
+    margin: 0;
+    width: $layoutWidthM * 0.8;
+  }
+}
+@media (min-width: $layoutWidthL) {
+  .wrapper {
+    margin: 0;
+    width: $layoutWidthL * 0.8;
+  }
+}
+@media (min-width: $layoutWidthXL) {
+  .wrapper {
+    margin: 0;
+    width: $layoutWidthXL * 0.8;
+  }
+}
+@media (min-width: $layoutWidth2XL) {
+  .wrapper {
+    margin: 0;
+    width: $layoutWidth2XL * 0.8;
+  }
+}

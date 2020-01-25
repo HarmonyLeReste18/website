@@ -1,0 +1,14 @@
+---
+layout: default
+title: Harmony Le Reste
+---
+
+<div class="gallery">
+  {% for file in site.static_files %}
+    {% if file.path contains "/photos/" %}
+      <div class="gallery-item" data-title="{{ file.name | titlelize }}">
+        <img alt="{{ file.name | titlelize }}" src="{{ file.path }}">
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
