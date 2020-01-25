@@ -1,100 +1,110 @@
-// .gallery {
-//   display: flex;
-//   flex-wrap: wrap;
-//   .gallery-item {
-//     height: 150px;
-//     line-height: 150px;
-//     background: #ec985a;
-//     color: white;
-//     margin: 0 1rem 1rem 0;
-//     text-align: center;
-//     font-family: system-ui;
-//     font-weight: 900;
-//     font-size: 2rem;
-//     flex: 1 0 auto;
-//   }
-//   @for $i from 1 through 36 {
-//     .gallery-item:nth-child(#{$i}) {
-//       // $h: (random(400) + 70) + px;
-//       // width: $h;
-//     }
-//   }
-// }
-
 .gallery {
-  // align-items: center;
-  // display: flex;
   flex-grow: 1;
-  // justify-content: center;
-  color: white;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: 0;
-}
 
-.gallery-item {
-  // display: inline-block;
-  // margin: 0 0 2rem;
-  background-color: #eee;
-  background-color: #eee;
-  border-radius: 5px;
-  border-radius: 5px;
-  height: auto;
-  overflow: hidden;
-  position: relative;
-
-  &:hover:after {
+  .gallery-item {
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    content: attr(data-title);
-    counter-increment: masonry;
     display: flex;
-    font-weight: bold;
-    height: 100%;
     justify-content: center;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: all 0.1s ease-in;
-    width: 100%;
-  }
 
-  > img {
-    height: auto;
-    position: relative;
-    width: 100%;
+    img {
+      height: auto;
+      width: 100%;
+    }
   }
 }
 
-@media (min-width: $layoutWidthXS) {
+@media (max-width: $layoutWidthS) {
   .gallery {
-    // column-count: 2;
+    .gallery-item {
+      max-width: $wrapperWidthXS / $galleryColumnsXS;
+      min-width: $wrapperWidthXS / $galleryColumnsXS;
+      width: $wrapperWidthXS / $galleryColumnsXS;
+
+      // &:nth-child(#{$galleryColumnsXS}n + 1) {
+      //   img {
+      //     margin-bottom: $galleryMarginXS;
+      //     margin-right: $galleryMarginXS;
+      //   }
+      // }
+    }
   }
 }
 @media (min-width: $layoutWidthS) {
   .gallery {
-    // column-count: 2;
+    .gallery-item {
+      max-width: $wrapperWidthS / $galleryColumnsS;
+      min-width: $wrapperWidthS / $galleryColumnsS;
+      width: $wrapperWidthS / $galleryColumnsS;
+    }
+
+    // &:nth-child(#{$galleryColumnsS}n + 1) {
+    //   img {
+    //     margin-bottom: $galleryMarginS;
+    //     margin-right: $galleryMarginS;
+    //   }
+    // }
   }
 }
 @media (min-width: $layoutWidthM) {
   .gallery {
-    // column-count: 2;
+    .gallery-item {
+      max-width: $wrapperWidthM / $galleryColumnsM;
+      min-width: $wrapperWidthM / $galleryColumnsM;
+      width: $wrapperWidthM / $galleryColumnsM;
+    }
+
+    // &:nth-child(2n + 1) {
+    //   img {
+    //     margin-bottom: $galleryMarginM;
+    //     margin-right: $galleryMarginM;
+    //   }
+    // }
   }
 }
 @media (min-width: $layoutWidthL) {
   .gallery {
-    // column-count: 2;
+    .gallery-item {
+      max-width: $wrapperWidthL / $galleryColumnsL;
+      min-width: $wrapperWidthL / $galleryColumnsL;
+      width: $wrapperWidthL / $galleryColumnsL;
+    }
+
+    // &:nth-child(#{$galleryColumnsL}n + 1) {
+    //   img {
+    //     margin-bottom: $galleryMarginL;
+    //     margin-right: $galleryMarginL;
+    //   }
+    // }
   }
 }
 @media (min-width: $layoutWidthXL) {
   .gallery {
-    // column-count: 3;
+    .gallery-item {
+      max-width: $wrapperWidthXL / $galleryColumnsXL;
+      min-width: $wrapperWidthXL / $galleryColumnsXL;
+      width: $wrapperWidthXL / $galleryColumnsXL;
+    }
+
+    // &:nth-child(#{$galleryColumnsXL}n + 1) {
+    //   img {
+    //     margin-bottom: $galleryMarginXL;
+    //     margin-right: $galleryMarginXL;
+    //   }
+    // }
   }
 }
 @media (min-width: $layoutWidth2XL) {
   .gallery {
-    // column-count: 3;
+    .gallery-item {
+      width: $wrapperWidth2XL / $galleryColumns2XL;
+      // width: ($wrapperWidth2XL - (($galleryColumns2XL - 1) * $galleryMargin2XL)) / $galleryColumns2XL;
+    }
+
+    // &:nth-child(#{$galleryColumns2XL}n + 1) {
+    //   img {
+    //     margin-bottom: $galleryMargin2XL;
+    //     margin-right: $galleryMargin2XL;
+    //   }
+    // }
   }
 }

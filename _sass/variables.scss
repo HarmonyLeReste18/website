@@ -1,14 +1,32 @@
-$galleryColumnsXS: 2;
-$galleryColumnsS: 2;
-$galleryColumnsM: 2;
-$galleryColumnsL: 2;
-$galleryColumnsXL: 2;
-$galleryColumnsXXL: 2;
-$galleryMargin: 1rem;
-
 $layoutWidthXS: 20rem;
 $layoutWidthS: 40rem;
 $layoutWidthM: 60rem;
 $layoutWidthL: 80rem;
 $layoutWidthXL: 100rem;
 $layoutWidth2XL: 120rem;
+
+$wrapperMarginXS: 1rem;
+$wrapperMarginS: 2rem;
+$wrapperMarginM: 0;
+$wrapperMarginL: 0;
+$wrapperMarginXL: 0;
+$wrapperMargin2XL: 0;
+$wrapperWidthXS: 100%;
+$wrapperWidthS: 100%;
+$wrapperWidthM: $layoutWidthM * 0.8;
+$wrapperWidthL: $layoutWidthL * 0.8;
+$wrapperWidthXL: $layoutWidthXL * 0.8;
+$wrapperWidth2XL: $layoutWidth2XL * 0.8;
+
+$galleryColumnsXS: 1;
+$galleryColumnsS: 2;
+$galleryColumnsM: 2;
+$galleryColumnsL: 3;
+$galleryColumnsXL: 4;
+$galleryColumns2XL: 5;
+$galleryMarginXS: 2rem;
+$galleryMarginS: 2rem;
+$galleryMarginM: 2rem;
+$galleryMarginL: 2rem;
+$galleryMarginXL: 2rem;
+$galleryMargin2XL: 2rem;

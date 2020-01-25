@@ -10,40 +10,39 @@
 
 .wrapper {
   flex-grow: 1;
-  margin: 1rem;
 }
 
-@media (min-width: $layoutWidthXS) {
-  .wrapper {
-    margin: 1rem;
-  }
+.wrapper {
+  margin: $wrapperMarginXS;
+  width: $wrapperWidthXS;
 }
 @media (min-width: $layoutWidthS) {
   .wrapper {
-    margin: 2rem;
+    margin: $wrapperMarginS;
+    width: $wrapperWidthS;
   }
 }
 @media (min-width: $layoutWidthM) {
   .wrapper {
-    margin: 0;
-    width: $layoutWidthM * 0.8;
+    margin: $wrapperMarginM;
+    width: $wrapperWidthM;
   }
 }
 @media (min-width: $layoutWidthL) {
   .wrapper {
-    margin: 0;
-    width: $layoutWidthL * 0.8;
+    margin: $wrapperMarginL;
+    width: $wrapperWidthL;
   }
 }
 @media (min-width: $layoutWidthXL) {
   .wrapper {
-    margin: 0;
-    width: $layoutWidthXL * 0.8;
+    margin: $wrapperMarginXL;
+    width: $wrapperWidthXL;
   }
 }
 @media (min-width: $layoutWidth2XL) {
   .wrapper {
-    margin: 0;
-    width: $layoutWidth2XL * 0.8;
+    margin: $wrapperMargin2XL;
+    width: $wrapperWidth2XL;
   }
 }
