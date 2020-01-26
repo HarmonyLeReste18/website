@@ -2,7 +2,7 @@ function onLoad() {
   const magicGrid = new MagicGrid({
     container: ".gallery",
     animate: true,
-    gutter: 0,
+    gutter: 32,
     static: true,
     useMin: true,
   });

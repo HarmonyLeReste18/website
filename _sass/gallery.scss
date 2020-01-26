@@ -16,8 +16,6 @@
 @media (max-width: $layoutWidthS) {
   .gallery {
     .gallery-item {
-      max-width: $wrapperWidthXS / $galleryColumnsXS;
-      min-width: $wrapperWidthXS / $galleryColumnsXS;
       width: $wrapperWidthXS / $galleryColumnsXS;
 
       // &:nth-child(#{$galleryColumnsXS}n + 1) {
@@ -32,8 +30,6 @@
 @media (min-width: $layoutWidthS) {
   .gallery {
     .gallery-item {
-      max-width: $wrapperWidthS / $galleryColumnsS;
-      min-width: $wrapperWidthS / $galleryColumnsS;
       width: $wrapperWidthS / $galleryColumnsS;
     }
 
@@ -48,9 +44,7 @@
 @media (min-width: $layoutWidthM) {
   .gallery {
     .gallery-item {
-      max-width: $wrapperWidthM / $galleryColumnsM;
-      min-width: $wrapperWidthM / $galleryColumnsM;
-      width: $wrapperWidthM / $galleryColumnsM;
+      width: ($wrapperWidthM - ($galleryMargin * $galleryColumnsM)) / $galleryColumnsM;
     }
 
     // &:nth-child(2n + 1) {
@@ -64,9 +58,7 @@
 @media (min-width: $layoutWidthL) {
   .gallery {
     .gallery-item {
-      max-width: $wrapperWidthL / $galleryColumnsL;
-      min-width: $wrapperWidthL / $galleryColumnsL;
-      width: $wrapperWidthL / $galleryColumnsL;
+      width: ($wrapperWidthL - ($galleryMargin * $galleryColumnsL)) / $galleryColumnsL;
     }
 
     // &:nth-child(#{$galleryColumnsL}n + 1) {
@@ -80,9 +72,7 @@
 @media (min-width: $layoutWidthXL) {
   .gallery {
     .gallery-item {
-      max-width: $wrapperWidthXL / $galleryColumnsXL;
-      min-width: $wrapperWidthXL / $galleryColumnsXL;
-      width: $wrapperWidthXL / $galleryColumnsXL;
+      width: ($wrapperWidthXL - ($galleryMargin * $galleryColumnsXL)) / $galleryColumnsXL;
     }
 
     // &:nth-child(#{$galleryColumnsXL}n + 1) {
@@ -96,8 +86,7 @@
 @media (min-width: $layoutWidth2XL) {
   .gallery {
     .gallery-item {
-      width: $wrapperWidth2XL / $galleryColumns2XL;
-      // width: ($wrapperWidth2XL - (($galleryColumns2XL - 1) * $galleryMargin2XL)) / $galleryColumns2XL;
+      width: ($wrapperWidth2XL - ($galleryMargin * $galleryColumns2XL)) / $galleryColumns2XL;
     }
 
     // &:nth-child(#{$galleryColumns2XL}n + 1) {
